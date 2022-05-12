@@ -4,8 +4,8 @@ set -e
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-SPIRE_RELEASE=1.3.2
-SPIRE_URL=https://github.com/MarcosDY/spire/releases/download/v${SPIRE_RELEASE}/spire-1.3.2-windows-x86_64.zip
+SPIRE_RELEASE=1.3.0
+SPIRE_URL=https://github.com/spiffe/spire/releases/download/v${SPIRE_RELEASE}/spire-${SPIRE_RELEASE}-windows-x86_64.zip
 
 echo "Building containers and binaries"
 ./build.sh
