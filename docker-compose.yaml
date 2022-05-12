@@ -1,0 +1,28 @@
+version: '3'
+services:
+  customers-api:
+    image: customer-api
+    build: 
+      context: ./docker/customer-api
+      dockerfile: Dockerfile
+    hostname: customer-api
+    isolation: 'process'
+    volumes:
+      - source: '\\.\pipe\spire-agent\public\api\'
+        target: '\\.\pipe\spire-agent\public\api\'
+        type: npipe
+  webapp:
+    image: webapp
+    build: 
+      context: ./docker/webapp
+      dockerfile: Dockerfile
+    depends_on: ["customer-api"]
+    hostname: webapp
+    isolation: 'process'
+    volumes:
+      - source: '\\.\pipe\spire-agent\public\api\'
+        target: '\\.\pipe\spire-agent\public\api\'
+        type: npipe
+    ports:
+      - 8080:8080
+
