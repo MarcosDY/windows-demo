@@ -27,7 +27,6 @@ USER_NAME="$USERDOMAIN\\$USERNAME"
      -selector "docker:image_id:customer-api" \
      -ttl 60
 
-# TODO: selector must be a common one
 ./spire/bin/spire-server.exe entry create \
      -parentID "spiffe://example.org/spire/agent/x509pop/${AGENT_FINGERPRINT}" \
      -spiffeID "spiffe://example.org/products-api" \

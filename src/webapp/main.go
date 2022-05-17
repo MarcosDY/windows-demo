@@ -18,9 +18,8 @@ import (
 
 const (
 	customerAPIURL = "https://customer-api:8443/"
-	// TODO: move IP to DNS
-	productAPIURL = "https://host.docker.internal:9443/"
-	port          = 8080
+	productAPIURL  = "https://host.docker.internal:9443/"
+	port           = 8080
 )
 
 var (
