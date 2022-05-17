@@ -17,6 +17,6 @@ USER_NAME="$USERDOMAIN\\$USERNAME"
 ./spire/bin/spire-server entry update \
      -entryID $ENTRY_ID \
      -parentID "spiffe://example.org/spire/agent/x509pop/${AGENT_FINGERPRINT}" \
-     -spiffeID "spiffe://example.org/products-api" \
+     -spiffeID "spiffe://example.org/products-api-u" \
      -selector "windows:user_name:$USER_NAME" \
      -ttl 60

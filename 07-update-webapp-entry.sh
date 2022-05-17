@@ -17,6 +17,6 @@ ENTRY_ID=$(./spire/bin/spire-server entry show -spiffeID spiffe://example.org/we
      -entryID $ENTRY_ID \
      -parentID "spiffe://example.org/spire/agent/x509pop/${AGENT_FINGERPRINT}" \
      -spiffeID "spiffe://example.org/webapp" \
-     -selector "docker:label:com.docker.compose.service:webapp" \
+     -selector "docker:label:com.docker.compose.service:webapp-u" \
      -selector "docker:image_id:webapp" \
      -ttl 60
