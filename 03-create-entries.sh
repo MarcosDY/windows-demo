@@ -23,7 +23,7 @@ USER_NAME="$USERDOMAIN\\$USERNAME"
 ./spire/bin/spire-server.exe entry create \
      -parentID "spiffe://example.org/spire/agent/x509pop/${AGENT_FINGERPRINT}" \
      -spiffeID "spiffe://example.org/customers-api" \
-     -selector "docker:label:com.docker.compose.service:customers-api" \
+     -selector "docker:label:com.docker.compose.service:customer-api" \
      -selector "docker:image_id:customer-api" \
      -ttl 60
 

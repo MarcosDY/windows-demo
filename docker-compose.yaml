@@ -1,8 +1,8 @@
 version: '3'
 services:
-  customers-api:
+  customer-api:
     image: customer-api
-    build: 
+    build:
       context: ./docker/customer-api
       dockerfile: Dockerfile
     hostname: customer-api
@@ -13,10 +13,10 @@ services:
         type: npipe
   webapp:
     image: webapp
-    build: 
+    build:
       context: ./docker/webapp
       dockerfile: Dockerfile
-    depends_on: ["customer-api"]
+    depends_on: [ "customer-api" ]
     hostname: webapp
     isolation: 'process'
     volumes:
@@ -25,4 +25,3 @@ services:
         type: npipe
     ports:
       - 8080:8080
-
